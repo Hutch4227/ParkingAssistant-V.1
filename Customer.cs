@@ -8,5 +8,9 @@ namespace ParkingAssistant_V._1
 {
     internal class Customer
     {
+        /*
+         * This is a test from Charlse
+         * 
+         */
     }
 }
