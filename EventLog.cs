@@ -8,5 +8,6 @@ namespace ParkingAssistant_V._1
 {
     internal class EventLog
     {
+        //test
     }
 }
