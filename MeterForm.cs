@@ -10,20 +10,22 @@ using System.Windows.Forms;
 
 namespace ParkingAssistant_V._1
 {
-    public partial class Form1 : Form
+    public partial class MeterForm : Form
     {
-        public Form1()
+        public MeterForm()
         {
             InitializeComponent();
         }
 
-        private void BtnAddVehicle_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
-            MeterForm frmMeter = new MeterForm();
-            DialogResult result = frmMeter.ShowDialog();
+            this.DialogResult = DialogResult.Cancel;
+        }
 
-            if (result == DialogResult.Cancel)
-                return;
+        private void MeterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
+
 }

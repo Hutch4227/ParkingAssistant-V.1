@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnAddVehicle = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnAddVehicle
+            // 
+            this.btnAddVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddVehicle.Location = new System.Drawing.Point(308, 569);
+            this.btnAddVehicle.Name = "btnAddVehicle";
+            this.btnAddVehicle.Size = new System.Drawing.Size(129, 51);
+            this.btnAddVehicle.TabIndex = 0;
+            this.btnAddVehicle.Text = "Add Vehicle";
+            this.btnAddVehicle.UseVisualStyleBackColor = true;
+            this.btnAddVehicle.Click += new System.EventHandler(this.BtnAddVehicle_Click);
             // 
             // Form1
             // 
@@ -36,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(828, 775);
+            this.Controls.Add(this.btnAddVehicle);
             this.Name = "Form1";
             this.Text = "Parking Assistant";
             this.ResumeLayout(false);
@@ -43,6 +56,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAddVehicle;
     }
 }
 
