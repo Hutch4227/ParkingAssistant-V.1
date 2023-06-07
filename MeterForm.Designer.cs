@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPlatenum = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPlateNum = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,12 +45,12 @@
             this.lblPlatenum.TabIndex = 0;
             this.lblPlatenum.Text = "Liscense Plate Number: ";
             // 
-            // textBox1
+            // textBoxPlateNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxPlateNum.Location = new System.Drawing.Point(184, 113);
+            this.textBoxPlateNum.Name = "textBoxPlateNum";
+            this.textBoxPlateNum.Size = new System.Drawing.Size(114, 22);
+            this.textBoxPlateNum.TabIndex = 1;
             // 
             // btnAdd
             // 
@@ -79,7 +79,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPlateNum);
             this.Controls.Add(this.lblPlatenum);
             this.Name = "MeterForm";
             this.Text = "Meter Form";
@@ -92,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPlatenum;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPlateNum;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
     }
