@@ -38,6 +38,124 @@ namespace ParkingAssistant_V._1
             this.timeIn = timeIn;
             this.timeOut = timeOut;
         }
+        public override string ToString()
+        {
+            // Plate number, card number, first name lastname, timeIn, timeOut
+            return plateNumber + " " + cardNumber + "Card number: " + firstName  + lastName + ", Time In:" + 
+            timeIn.ToShortDateString() + ", Time Out: " + timeOut.ToShortDateString();
+        }
+        public virtual double CalculateCost()
+        {
+            return 0.0;
+        }
+        public string PlateNumer
+        {
+            get
+            {
+                return plateNumber;              
+            }
+            set
+            {
+                if (value.Length > 0)
+                    plateNumber = value;
+
+                else
+                    plateNumber = "unknown";
+            }
+        }
+        public string CardNumber
+        {
+            get
+            {
+                return cardNumber;               
+            }
+            set
+            {
+                if (value.Length > 0)
+                    cardNumber = value;
+
+                else
+                    cardNumber = "unknown";
+            }
+        }
+        public string PlateNumber
+        {
+            get
+            {
+                return plateNumber;              
+            }
+            set
+            {
+                if (value.Length > 0)
+                    plateNumber = value;
+
+                else
+                    plateNumber = "unknown";
+            }
+        }
+        public string FirstName
+        {
+            get
+            {
+                return firstName;              
+            }
+            set
+            {
+                if (value.Length > 0)
+                    firstName = value;
+
+                else
+                    firstName = "unknown";
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return lastName;              
+            }
+            set
+            {
+                if (value.Length > 0)
+                    lastName = value;
+
+                else
+                    lastName = "unknown";
+            }
+        }
+        public DateTime TimeIn
+        {
+            get
+            {
+                return timeIn;
+            }
+
+            set
+            {
+                if (value.Year >= 1950 && value.Year <= DateTime.Now.Year + 5) //I had to make modifications hear to accept a wider range of dates, I also had the operator reversed
+                    timeIn = value;
+                else
+                    timeIn = DateTime.MinValue; //01/01/0001
+            }
+        }
+
+        public DateTime TimeOut
+        {
+            get
+            {
+                return timeOut;
+            }
+
+            set
+            {
+                if (value.Year >= 1950 && value.Year <= DateTime.Now.Year + 5) //I had to make modifications hear to accept a wider range of dates, I also had the operator reversed
+                    timeOut = value;
+                else
+                    timeOut = DateTime.MinValue; //01/01/0001
+            }
+        }
+
     }
 
 
