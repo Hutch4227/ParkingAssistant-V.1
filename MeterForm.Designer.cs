@@ -40,6 +40,7 @@
             this.lblcardNum = new System.Windows.Forms.Label();
             this.cardNumTextBox = new System.Windows.Forms.TextBox();
             this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPlatenum
@@ -62,7 +63,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(83, 337);
+            this.btnAdd.Location = new System.Drawing.Point(67, 336);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 2;
@@ -72,7 +73,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(203, 337);
+            this.btnCancel.Location = new System.Drawing.Point(184, 336);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -115,7 +116,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(922, 524);
+            this.btnRemove.Location = new System.Drawing.Point(965, 524);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(148, 66);
             this.btnRemove.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(594, 524);
+            this.btnDisplay.Location = new System.Drawing.Point(719, 524);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(159, 66);
             this.btnDisplay.TabIndex = 12;
@@ -153,7 +154,7 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(113, 425);
+            this.btnCheckout.Location = new System.Drawing.Point(480, 529);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(141, 57);
             this.btnCheckout.TabIndex = 15;
@@ -161,12 +162,23 @@
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(295, 336);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 16;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MeterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1206, 685);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.cardNumTextBox);
             this.Controls.Add(this.lblcardNum);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.Label lblcardNum;
         private System.Windows.Forms.TextBox cardNumTextBox;
         private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
