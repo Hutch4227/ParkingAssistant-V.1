@@ -13,29 +13,29 @@ namespace ParkingAssistant_V._1
         private string plateNum;
         private string lastName;
         private DateTime entryDay;
-        private DateTime exitDay;
+        private string cardNum;
 
         // constructors 
         public ParkingMeter()
         {
             plateNum = "unknown";
             lastName = "unknown";
-            entryDay = DateTime.MinValue;
-            exitDay = DateTime.MinValue;
+            entryDay = DateTime.MinValue;          
+            cardNum = "unknown";
         }
 
-        public ParkingMeter(string plateNum, string lastName, DateTime entryDay, DateTime exitDay)
+        public ParkingMeter(string plateNum, string lastName, DateTime entryDay, string cardNum)
         {
             this.plateNum = plateNum;
             this.lastName = lastName;
             this.entryDay = entryDay;
-            this.exitDay = exitDay;
+            this.cardNum = cardNum;
         }
 
         public override string ToString()
         {
-            return "plateNumber=" + plateNum + ", lastName=" + lastName +
-                ", entryDate=" + entryDay.ToShortDateString() + ", exitDate=" + exitDay.ToShortDateString();
+            return "plateNumber=" + plateNum + ", lastName=" + lastName + ", cardNumber=" + cardNum +
+                ", entryDate=" + entryDay.ToShortDateString();
         }
 
         public string platenum

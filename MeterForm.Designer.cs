@@ -41,6 +41,8 @@
             this.ExitTextBox = new System.Windows.Forms.TextBox();
             this.EntryTextBox = new System.Windows.Forms.TextBox();
             this.btnDisplay = new System.Windows.Forms.Button();
+            this.lblcardNum = new System.Windows.Forms.Label();
+            this.cardNumTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblPlatenum
@@ -83,11 +85,16 @@
             // 
             // VehiclelistBox
             // 
+            this.VehiclelistBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.VehiclelistBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VehiclelistBox.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.VehiclelistBox.FormattingEnabled = true;
+            this.VehiclelistBox.HorizontalScrollbar = true;
             this.VehiclelistBox.ItemHeight = 16;
-            this.VehiclelistBox.Location = new System.Drawing.Point(672, 40);
+            this.VehiclelistBox.Location = new System.Drawing.Point(467, 48);
             this.VehiclelistBox.Name = "VehiclelistBox";
-            this.VehiclelistBox.Size = new System.Drawing.Size(497, 404);
+            this.VehiclelistBox.ScrollAlwaysVisible = true;
+            this.VehiclelistBox.Size = new System.Drawing.Size(727, 434);
             this.VehiclelistBox.TabIndex = 4;
             this.VehiclelistBox.SelectedIndexChanged += new System.EventHandler(this.VehiclelistBox_SelectedIndexChanged);
             // 
@@ -96,7 +103,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLastName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLastName.Location = new System.Drawing.Point(62, 162);
+            this.lblLastName.Location = new System.Drawing.Point(26, 198);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(78, 16);
             this.lblLastName.TabIndex = 5;
@@ -104,16 +111,16 @@
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(184, 162);
+            this.LastNameTextBox.Location = new System.Drawing.Point(184, 198);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(187, 22);
             this.LastNameTextBox.TabIndex = 6;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(143, 421);
+            this.btnRemove.Location = new System.Drawing.Point(114, 419);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.Size = new System.Drawing.Size(135, 60);
             this.btnRemove.TabIndex = 7;
             this.btnRemove.Text = "Checkout";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -124,7 +131,7 @@
             this.lblEntry.AutoSize = true;
             this.lblEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblEntry.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEntry.Location = new System.Drawing.Point(62, 201);
+            this.lblEntry.Location = new System.Drawing.Point(26, 240);
             this.lblEntry.Name = "lblEntry";
             this.lblEntry.Size = new System.Drawing.Size(75, 16);
             this.lblEntry.TabIndex = 8;
@@ -135,7 +142,7 @@
             this.lblExit.AutoSize = true;
             this.lblExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblExit.Location = new System.Drawing.Point(62, 246);
+            this.lblExit.Location = new System.Drawing.Point(26, 285);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(66, 16);
             this.lblExit.TabIndex = 9;
@@ -143,27 +150,45 @@
             // 
             // ExitTextBox
             // 
-            this.ExitTextBox.Location = new System.Drawing.Point(184, 240);
+            this.ExitTextBox.Location = new System.Drawing.Point(184, 285);
             this.ExitTextBox.Name = "ExitTextBox";
             this.ExitTextBox.Size = new System.Drawing.Size(114, 22);
             this.ExitTextBox.TabIndex = 10;
             // 
             // EntryTextBox
             // 
-            this.EntryTextBox.Location = new System.Drawing.Point(184, 201);
+            this.EntryTextBox.Location = new System.Drawing.Point(184, 240);
             this.EntryTextBox.Name = "EntryTextBox";
             this.EntryTextBox.Size = new System.Drawing.Size(114, 22);
             this.EntryTextBox.TabIndex = 11;
             // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(887, 494);
+            this.btnDisplay.Location = new System.Drawing.Point(756, 524);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(142, 53);
+            this.btnDisplay.Size = new System.Drawing.Size(159, 66);
             this.btnDisplay.TabIndex = 12;
             this.btnDisplay.Text = "Show Current Vehicles";
             this.btnDisplay.UseVisualStyleBackColor = true;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // lblcardNum
+            // 
+            this.lblcardNum.AutoSize = true;
+            this.lblcardNum.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblcardNum.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblcardNum.Location = new System.Drawing.Point(26, 155);
+            this.lblcardNum.Name = "lblcardNum";
+            this.lblcardNum.Size = new System.Drawing.Size(131, 16);
+            this.lblcardNum.TabIndex = 13;
+            this.lblcardNum.Text = "Credit Card Number: ";
+            // 
+            // cardNumTextBox
+            // 
+            this.cardNumTextBox.Location = new System.Drawing.Point(184, 155);
+            this.cardNumTextBox.Name = "cardNumTextBox";
+            this.cardNumTextBox.Size = new System.Drawing.Size(187, 22);
+            this.cardNumTextBox.TabIndex = 14;
             // 
             // MeterForm
             // 
@@ -171,6 +196,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1206, 685);
+            this.Controls.Add(this.cardNumTextBox);
+            this.Controls.Add(this.lblcardNum);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.EntryTextBox);
             this.Controls.Add(this.ExitTextBox);
@@ -207,5 +234,7 @@
         private System.Windows.Forms.TextBox ExitTextBox;
         private System.Windows.Forms.TextBox EntryTextBox;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.Label lblcardNum;
+        private System.Windows.Forms.TextBox cardNumTextBox;
     }
 }
