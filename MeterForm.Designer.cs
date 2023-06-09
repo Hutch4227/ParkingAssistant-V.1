@@ -36,13 +36,10 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.lblEntry = new System.Windows.Forms.Label();
-            this.lblExit = new System.Windows.Forms.Label();
-            this.ExitTextBox = new System.Windows.Forms.TextBox();
-            this.EntryTextBox = new System.Windows.Forms.TextBox();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.lblcardNum = new System.Windows.Forms.Label();
             this.cardNumTextBox = new System.Windows.Forms.TextBox();
+            this.btnCheckout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPlatenum
@@ -118,53 +115,17 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(114, 419);
+            this.btnRemove.Location = new System.Drawing.Point(922, 524);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(135, 60);
+            this.btnRemove.Size = new System.Drawing.Size(148, 66);
             this.btnRemove.TabIndex = 7;
-            this.btnRemove.Text = "Checkout";
+            this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // lblEntry
-            // 
-            this.lblEntry.AutoSize = true;
-            this.lblEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEntry.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblEntry.Location = new System.Drawing.Point(26, 240);
-            this.lblEntry.Name = "lblEntry";
-            this.lblEntry.Size = new System.Drawing.Size(75, 16);
-            this.lblEntry.TabIndex = 8;
-            this.lblEntry.Text = "Entry Date: ";
-            // 
-            // lblExit
-            // 
-            this.lblExit.AutoSize = true;
-            this.lblExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblExit.Location = new System.Drawing.Point(26, 285);
-            this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(66, 16);
-            this.lblExit.TabIndex = 9;
-            this.lblExit.Text = "Exit Date: ";
-            // 
-            // ExitTextBox
-            // 
-            this.ExitTextBox.Location = new System.Drawing.Point(184, 285);
-            this.ExitTextBox.Name = "ExitTextBox";
-            this.ExitTextBox.Size = new System.Drawing.Size(114, 22);
-            this.ExitTextBox.TabIndex = 10;
-            // 
-            // EntryTextBox
-            // 
-            this.EntryTextBox.Location = new System.Drawing.Point(184, 240);
-            this.EntryTextBox.Name = "EntryTextBox";
-            this.EntryTextBox.Size = new System.Drawing.Size(114, 22);
-            this.EntryTextBox.TabIndex = 11;
-            // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(756, 524);
+            this.btnDisplay.Location = new System.Drawing.Point(594, 524);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(159, 66);
             this.btnDisplay.TabIndex = 12;
@@ -190,19 +151,26 @@
             this.cardNumTextBox.Size = new System.Drawing.Size(187, 22);
             this.cardNumTextBox.TabIndex = 14;
             // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(113, 425);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(141, 57);
+            this.btnCheckout.TabIndex = 15;
+            this.btnCheckout.Text = "Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
             // MeterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1206, 685);
+            this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.cardNumTextBox);
             this.Controls.Add(this.lblcardNum);
             this.Controls.Add(this.btnDisplay);
-            this.Controls.Add(this.EntryTextBox);
-            this.Controls.Add(this.ExitTextBox);
-            this.Controls.Add(this.lblExit);
-            this.Controls.Add(this.lblEntry);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.lblLastName);
@@ -229,12 +197,9 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Label lblEntry;
-        private System.Windows.Forms.Label lblExit;
-        private System.Windows.Forms.TextBox ExitTextBox;
-        private System.Windows.Forms.TextBox EntryTextBox;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Label lblcardNum;
         private System.Windows.Forms.TextBox cardNumTextBox;
+        private System.Windows.Forms.Button btnCheckout;
     }
 }

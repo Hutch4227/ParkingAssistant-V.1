@@ -33,12 +33,11 @@ namespace ParkingAssistant_V._1
 
         private void VehiclelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            //DateTime exitDay = DateTime.Today;
             int itemNumber = VehiclelistBox.SelectedIndex;
 
             if (itemNumber > -1)
@@ -48,7 +47,7 @@ namespace ParkingAssistant_V._1
             }
             else
             {
-                MessageBox.Show("Please select vehicle to Checkout.");
+                MessageBox.Show("Please select vehicle to Remove.");
             }
         }
 
@@ -107,12 +106,17 @@ namespace ParkingAssistant_V._1
 
                 fs.Close();
 
-                //copy weach vehicle object to the list box
+                //copy each vehicle object to the list box
                 foreach (ParkingMeter vehic in list)
                 {
                     VehiclelistBox.Items.Add(vehic);
                 }
             }
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -20,7 +20,7 @@ namespace ParkingAssistant_V._1
         {
             plateNum = "unknown";
             lastName = "unknown";
-            entryDay = DateTime.MinValue;          
+            entryDay = DateTime.Today;          
             cardNum = "unknown";
         }
 
