@@ -20,6 +20,7 @@ namespace ParkingAssistant_V._1
         public MeterForm()
         {
             InitializeComponent();
+            EventLog.Writelog("Meter Form Started");
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

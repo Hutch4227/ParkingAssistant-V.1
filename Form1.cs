@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace ParkingAssistant_V._1
 {
+    
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -21,9 +23,14 @@ namespace ParkingAssistant_V._1
         {
             MeterForm frmMeter = new MeterForm();
             DialogResult result = frmMeter.ShowDialog();
-
+           
+           
+            
             if (result == DialogResult.Cancel)
                 return;
+
+            
         }
+        
     }
 }

@@ -43,6 +43,8 @@ namespace ParkingAssistant_V._1
             // Plate number, card number, first name lastname, timeIn, timeOut
             return plateNumber + " " + cardNumber + "Card number: " + firstName  + lastName + ", Time In:" + 
             timeIn.ToShortDateString() + ", Time Out: " + timeOut.ToShortDateString();
+
+
         }
         public virtual double CalculateCost()
         {
@@ -154,9 +156,11 @@ namespace ParkingAssistant_V._1
                 else
                     timeOut = DateTime.MinValue; //01/01/0001
             }
+
+           
         }
-
+       
     }
-
+   
 
 }
