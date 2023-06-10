@@ -133,6 +133,7 @@ namespace ParkingAssistant_V._1
 
             TimeSpan dateOut = DateTime.Today - entryDay ;
 
+
             //MessageBox.Show(dateOut.ToString("dd"));
 
             if (dateOut.TotalDays == 0)
@@ -143,7 +144,7 @@ namespace ParkingAssistant_V._1
                 MessageBox.Show("Your total is 45");
 
             }
-            else if (dateOut.TotalDays > 3)
+            else if (dateOut.TotalDays > 2)
             {
                 double price = 0;
                 
