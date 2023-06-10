@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace ParkingAssistant_V._1
     {
         // class level references
         const string FILENAME = "Vehicles.csv";
+        DateTime entryDay = DateTime.Today;
         public MeterForm()
         {
             InitializeComponent();
@@ -127,6 +129,31 @@ namespace ParkingAssistant_V._1
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            
+
+            TimeSpan dateOut = DateTime.Today - entryDay ;
+
+            //MessageBox.Show(dateOut.ToString("dd"));
+
+            if (dateOut.TotalDays == 0)
+            {
+                MessageBox.Show("Your total is 30$");
+            }
+            else if (dateOut.TotalDays == 1) {
+                MessageBox.Show("Your total is 45");
+
+            }
+            else if (dateOut.TotalDays > 3)
+            {
+                double price = 0;
+                
+                price = dateOut.TotalDays * 15;
+
+                MessageBox.Show("Your total is: " + price);
+            }
+                
+            
+            
 
         }
     }
