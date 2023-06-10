@@ -15,7 +15,7 @@ namespace ParkingAssistant_V._1
     public partial class MeterForm : Form
     {
         // class level references
-        private const string FILENAME = "Vehicles.csv";
+        const string FILENAME = "Vehicles.csv";
         public MeterForm()
         {
             InitializeComponent();
