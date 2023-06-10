@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace ParkingAssistant_V._1
     public partial class MeterForm : Form
     {
         // class level references
-        private const string FILENAME = "Vehicles.csv";
+        const string FILENAME = "Vehicles.csv";
         public MeterForm()
         {
             InitializeComponent();
@@ -79,11 +80,21 @@ namespace ParkingAssistant_V._1
             FileStream fs = new FileStream(FILENAME, FileMode.Create);
             BinaryFormatter formatter = new BinaryFormatter();
 
-            //write the entire object to the file in one line
-            formatter.Serialize(fs, vehicList);
+            try
+            {
+                //write the entire object to the file in one line
+                formatter.Serialize(fs, vehicList);
+            }
 
-            //close the pipe
-            fs.Close();
+            catch (SerializationException e)
+            {
+                Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                    throw;
+            }
+            finally
+            { 
+                fs.Close();
+            }
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
@@ -97,7 +108,7 @@ namespace ParkingAssistant_V._1
             VehiclelistBox.Items.Clear();
 
             //check to see if the file exists
-            if (File.Exists(FILENAME) && new FileInfo(FILENAME).Length < 0)
+            if (File.Exists(FILENAME) && new FileInfo(FILENAME).Length > 0)
             {
                 FileStream fs = new FileStream(FILENAME, FileMode.Open);
                 BinaryFormatter formatter = new BinaryFormatter();
@@ -118,12 +129,5 @@ namespace ParkingAssistant_V._1
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-            this.Hide();
-        }
     }
-
 }
