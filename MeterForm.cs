@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -53,6 +54,7 @@ namespace ParkingAssistant_V._1
             {
                 MessageBox.Show("Please select vehicle to Remove.");
             }
+                        
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace ParkingAssistant_V._1
                 }
             }
         }
-
+       
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             

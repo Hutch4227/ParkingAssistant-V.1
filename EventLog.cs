@@ -14,19 +14,19 @@ namespace ParkingAssistant_V._1
         // Capture events for the parking system.
         // Display dates and times of each parking event.
 
-       
+       // This class creates the directory if its not there, and let you know where th read the information.
         public static void CirCretor()
         {
-            string V = ConfigurationManager.AppSettings["EventLogPath"];
+            string V = @"C:/temp/EventLog/";
 
             if (Directory.Exists(V) == false)
             {
                 Directory.CreateDirectory(V);
                 MessageBox.Show("Dir has been created");
             }
-            else
+            else 
             {
-                MessageBox.Show("The Path is already there.......");
+                MessageBox.Show("Your action are being logged to C:\\Temp\\Eventlog\\log.txt");
             }
 
         }
@@ -34,20 +34,17 @@ namespace ParkingAssistant_V._1
         public static void Writelog(string message)
         {
             //Setting the path to save to file to
+            CirCretor();
+            string EventLogPath = ConfigurationManager.AppSettings["EventLogPath"];
 
-            string logPath = ConfigurationManager.AppSettings["EventLogPath"];
-
-            using (StreamWriter sw = new StreamWriter(logPath, true))
+            using (StreamWriter sw = new StreamWriter(EventLogPath, true))
             {
                 sw.WriteLine($"*************************************************************");
                 sw.WriteLine($"{DateTime.Now} : {message}");
             }
         }
 
-        //internal static void Writelog(string v)
-        //{
-        //    throw new NotImplementedException();
-       // }
+       
     }
 }
 
